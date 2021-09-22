@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:id="@+id/music_item"
+        android:layout_marginBottom="5dp">
+
+
+        <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/song_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/song_string_img" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/song_title"
+                app:layout_constraintTop_toTopOf="@+id/song_img"
+                app:layout_constraintStart_toEndOf="@+id/song_img"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/song_artist"
+                app:layout_constraintStart_toEndOf="@+id/song_img"
+                app:layout_constraintBottom_toBottomOf="@+id/song_img"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">简易音乐</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_channel_name">播放音乐通知</string>
+    <string name="notification_channel_description">用于控制音乐播放</string>
+    <string name="drawer_string_music">音乐</string>
+    <string name="drawer_string_settings">设置</string>
+    <string name="home_menu_refresh">刷新</string>
+    <string name="bottom_controller_playbtn">播放</string>
+    <string name="bottom_controller_prevbtn">上一曲</string>
+    <string name="bottom_controller_nextbtn">下一曲</string>
+    <string name="bottom_controller_img">专辑图片</string>
+    <string name="bottom_controller_title">未加载歌单</string>
+    <string name="song_string_img">专辑图片</string>
+    <string name="settingfragment_introduce">设置</string>
+    <string name="playerfragment_bg_img">播放背景</string>
+    <string name="playerfragment_cover_img">播放专辑图片</string>
+    <string name="playerfragment_playbtn">播放</string>
+    <string name="playerfragment_prevbtn">上一曲</string>
+    <string name="playerfragment_nextbtn">下一曲</string>
+    <string name="playerfragment_playlist">歌单</string>
+    <string name="playerfragment_repeatbtn">切换播放模式</string>
+    <string name="playerfragment_backbtn">返回</string>
+    <string name="albumfragment_album_img">专辑图片</string>
+    <string name="albumdetail_album_img">专辑图片</string>
+</resources>

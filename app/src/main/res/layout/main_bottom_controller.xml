@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/bottom_controller">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/exo_controls_pause"
+            android:id="@+id/exo_play_pause"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            style="@style/ExoMediaButton.Play"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/bottom_controller_playbtn" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/exo_controls_previous"
+            android:id="@+id/exo_prev"
+            app:layout_constraintBottom_toBottomOf="@+id/exo_play_pause"
+            app:layout_constraintTop_toTopOf="@+id/exo_play_pause"
+            app:layout_constraintEnd_toStartOf="@+id/exo_play_pause"
+            android:layout_marginEnd="32dp"
+            app:tint="@color/black"
+            style="@style/ExoMediaButton.Previous"
+            android:contentDescription="@string/bottom_controller_prevbtn" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/exo_controls_next"
+            android:id="@+id/exo_next"
+            app:layout_constraintBottom_toBottomOf="@+id/exo_play_pause"
+            app:layout_constraintTop_toTopOf="@+id/exo_play_pause"
+            app:layout_constraintStart_toEndOf="@+id/exo_play_pause"
+            android:layout_marginStart="32dp"
+            app:tint="@color/black"
+            style="@style/ExoMediaButton.Next"
+            android:contentDescription="@string/bottom_controller_nextbtn" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline3"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.22" />
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exo_icon"
+            android:src="@drawable/error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/bottom_controller_img" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline4"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+            android:text="@string/bottom_controller_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/exo_title"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/exo_play_pause"
+            android:gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

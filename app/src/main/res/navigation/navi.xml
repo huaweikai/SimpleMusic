@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navi"
+        app:startDestination="@id/musicFragment">
+
+    <fragment
+            android:id="@+id/musicFragment"
+            android:name="com.byexoplayer.music.ui.fragments.MusicFragment"
+            android:label="音乐"
+            tools:layout="@layout/fragment_music" >
+        <action
+                android:id="@+id/action_musicFragment_to_albumDetailFragment"
+                app:destination="@id/albumDetailFragment" />
+        <action
+                android:id="@+id/action_musicFragment_to_playFragment"
+                app:destination="@id/playFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.byexoplayer.music.ui.fragments.SettingsFragment"
+            android:label="设置"
+            tools:layout="@layout/fragment_settings" />
+    <fragment
+            android:id="@+id/albumDetailFragment"
+            android:name="com.byexoplayer.music.ui.fragments.AlbumDetailFragment"
+            android:label="AlbumDetailFragment" >
+        <action
+                android:id="@+id/action_albumDetailFragment_to_playFragment"
+                app:destination="@id/playFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/playFragment"
+            android:name="com.byexoplayer.music.ui.fragments.PlayFragment"
+            android:label="fragment_play"
+            tools:layout="@layout/fragment_play" />
+</navigation>
