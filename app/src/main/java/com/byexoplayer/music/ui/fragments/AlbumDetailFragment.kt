@@ -62,7 +62,7 @@ class AlbumDetailFragment : Fragment() {
     private fun initView() {
         album?.let {
             bind.appBarImage.load(it.albumImg) {
-                error(R.drawable.ic_launcher_background)
+                error(R.drawable.error)
             }
             requireActivity().findViewById<Toolbar>(R.id.main_toolBar).title = it.albumTitle
         }
