@@ -47,7 +47,7 @@ class MusicPlayerEventListener(
             it.description.mediaUri.toString() == mediaItem?.mediaId
         }
         musicService.mSession.setMetadata(queueItem?.let { Utils.mediaItemToMeta(it) })
-        setNewState(PlaybackStateCompat.STATE_BUFFERING)
+        setNewState(PlaybackStateCompat.STATE_PLAYING)
     }
     private fun setNewState(state: Int) {
         val stateBuilder = PlaybackStateCompat.Builder()
