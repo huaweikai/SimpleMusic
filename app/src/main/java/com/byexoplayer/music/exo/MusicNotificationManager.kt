@@ -44,6 +44,7 @@ class MusicNotificationManager(
             setSmallIcon(R.drawable.ic_music_icon)
             //让通知manager来访问我们当前的媒体会话
             setMediaSessionToken(sessionToken)
+            setControlDispatcher(MusicControlDispatcher())
         }
     }
 
@@ -52,7 +53,27 @@ class MusicNotificationManager(
     }
 
 
+    private inner class MusicControlDispatcher: DefaultControlDispatcher() {
+        val window= Timeline.Window()
+        override fun dispatchPrevious(player: Player): Boolean {
 
+            val timeline = player.currentTimeline
+            if (timeline.isEmpty || player.isPlayingAd) {
+                return true
+            }
+            val windowIndex = player.currentWindowIndex
+            timeline.getWindow(windowIndex, window)
+            val previousWindowIndex = player.previousWindowIndex
+            val isUnseekableLiveStream = window.isLive() && !window.isSeekable
+            if (previousWindowIndex != C.INDEX_UNSET
+            ) {
+                player.seekTo(previousWindowIndex, C.TIME_UNSET)
+            } else if (!isUnseekableLiveStream) {
+                player.seekTo(windowIndex,  0)
+            }
+            return true
+        }
+    }
 
     //用来控制媒体的我们还需要将session给这个，我们可以用它控制当前音乐，并且在服务中也有这样
     //服务链接中有这样的媒体控制器
